@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the number of subjects:");
+      int n =sc.nextInt();
+      int total=0;
+      for(int i=1;i<=n;i++){
+          System.out.println("Enter your marks for subject "+i+":");
+          int marks=sc.nextInt();
+          total+=marks;
+      }
+      double average=(double)total/n;
+      if(average>90){
+          System.out.println("Grade:O");
+      }else if(average>80){
+          System.out.println("Grade:A+");
+      }else if(average>70){
+          System.out.println("Grade:A");
+      }else if(average>70){
+          System.out.println("Grade:B+");
+      }else if(average>70){
+          System.out.println("Grade:B");
+      }else{
+          System.out.println("Grade:Fail");
+      }
+      System.out.println("Percentage:"+average);
+    }
+}
